@@ -1,3 +1,5 @@
+print("testing")
+
 local grass = get("grass")
 local gb = get("gb")
 local timesPressed = 0
