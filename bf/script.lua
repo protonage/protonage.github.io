@@ -71,7 +71,7 @@ local function bfl1()
     local lc = 0
     if bfarr[ptr] == 0 then
         d = false
-        while d == false
+        while d == false do
             cp = cp + 1
             if split(code,"")[cp] == "[" then
                 lc = lc + 1
@@ -90,7 +90,7 @@ local function bfl2()
     local lc = 0
     if bfarr[ptr] == 0 then
         d = false
-        while d == false
+        while d == false do
             cp = cp - 1
             if split(code,"")[cp] == "]" then
                 lc = lc + 1
