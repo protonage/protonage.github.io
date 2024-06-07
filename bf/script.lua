@@ -105,6 +105,7 @@ local function bfl2()
     end
 end
 local function interpret()
+    cp = 1
     while cp <= #split(code,"") do
         print(code)
         print(split(code,""))
