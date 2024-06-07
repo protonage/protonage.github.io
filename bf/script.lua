@@ -106,6 +106,7 @@ local function bfl2()
 end
 local function interpret()
     while cp <= #split(code,"") do
+        print(split(code,"")[cp])
         if split(code,"")[cp] == "+" then
             bfadd()
         elseif split(code,"")[cp] == "-" then
