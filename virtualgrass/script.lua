@@ -13,5 +13,6 @@ local function touchgrass()
     print("touched grass")
     if timesPressed == ga then
         get("award").set_content("<img src='https://raw.githubusercontent.com/protonage/protonage.github.io/main/virtualgrass/grass.gif'/> Youve earned this badge! Place it on any webpage by putting https://raw.githubusercontent.com/protonage/protonage.github.io/main/virtualgrass/grass.gif in an image tag!")
+    end
 end
 get("grass").on_click(touchgrass)
