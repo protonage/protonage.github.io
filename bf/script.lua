@@ -122,6 +122,7 @@ local function interpret()
         elseif split(code,"")[cp] == "[" then bfl1()
         elseif split(code,"")[cp] == "]" then bfl2()
         end
+        cp = cp +1
     end
 end
 local function cbclick()
