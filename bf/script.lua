@@ -109,6 +109,7 @@ local function interpret()
         print(code)
         print(split(code,""))
         print(split(code,"")[cp])
+        print(cp)
         if split(code,"")[cp] == "+" then
             bfadd()
         elseif split(code,"")[cp] == "-" then
