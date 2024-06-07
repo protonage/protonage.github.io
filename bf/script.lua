@@ -58,7 +58,7 @@ local function bfl()
     ptr = ptr - 1
 end
 local function bfo()
-    get("output").set_content(get("output").get_content() .. string.char(bfarr[ptr]))
+    get("output").set_content(get("output").get_content() .. String.char(bfarr[ptr]))
 end
 local function bfi()
     local inp = split(input,"")
@@ -107,10 +107,13 @@ end
 local function interpret()
     cp = 1
     while cp <= #split(code,"") do
-        print(code)
-        print(split(code,""))
-        print(split(code,"")[cp])
-        print(cp)
+        --print(code)
+        --print(split(code,""))
+        --print(split(code,"")[cp])
+        --print(cp)
+        print(ptr)
+        print(bfarr)
+        print(bfarr[ptr])
         if split(code,"")[cp] == "+" then
             bfadd()
         elseif split(code,"")[cp] == "-" then
