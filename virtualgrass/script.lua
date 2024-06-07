@@ -2,7 +2,7 @@ print("Made with <3 by Protonage!")
 
 local grass = get("grass")
 local gb = get("gb")
-local ga = 42
+local ga = 600
 local timesPressed = 0
 
 get("ga").set_content("To get the benefits of virtual grass, please click the grass " .. ga .. " times")
