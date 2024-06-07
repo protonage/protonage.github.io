@@ -4,7 +4,9 @@ background {
     direction: column;
     align-items: fill;
 }
+body {
+    font_size: 8pt;
+}
 a {
     color: #aa00aa;
-    font_size: 11px;
 }
