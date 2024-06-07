@@ -1,4 +1,3 @@
-wait(0.1)
 print("1")
 local function cbclick()
     print("cb has been clicked")
