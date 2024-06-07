@@ -3,7 +3,7 @@ background {
     color: #ffffff;
     direction: column;
     align-items: fill;
-    font-size: 14pt;
+    font-size: 14pt !important;
 }
 a {
     color: #aa00aa;
