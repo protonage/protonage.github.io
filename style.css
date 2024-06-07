@@ -1,6 +1,8 @@
 background {
     background-color: #1c1c25;
     color: #ffffff;
+    direction: column;
+    align-items: fill;
 }
 a {
     color: #5500aa;
