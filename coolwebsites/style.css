@@ -3,8 +3,6 @@ background {
     color: #ffffff;
     direction: column;
     align-items: fill;
-}
-body {
     font_size: 8;
 }
 a {
