@@ -105,17 +105,17 @@ local function bfl2()
     end
 end
 local function interpret()
-    while cp <= #code:gmatch"." do
-        if code:gmatch"."[cp] == "+" then
+    while cp <= #split(code,"") do
+        if split(code,"")[cp] == "+" then
             bfadd()
-        elseif code:gmatch"."[cp] == "-" then
+        elseif split(code,"")[cp] == "-" then
             bfsub()
-        elseif code:gmatch"."[cp] == ">" then bfr()
-        elseif code:gmatch"."[cp] == "<" then bfl()
-        elseif code:gmatch"."[cp] == "," then bfi()
-        elseif code:gmatch"."[cp] == "." then bfo()
-        elseif code:gmatch"."[cp] == "[" then bfl1()
-        elseif code:gmatch"."[cp] == "]" then bfl2()
+        elseif split(code,"")[cp] == ">" then bfr()
+        elseif split(code,"")[cp] == "<" then bfl()
+        elseif split(code,"")[cp] == "," then bfi()
+        elseif split(code,"")[cp] == "." then bfo()
+        elseif split(code,"")[cp] == "[" then bfl1()
+        elseif split(code,"")[cp] == "]" then bfl2()
         end
     end
 end
