@@ -76,7 +76,7 @@ local function bfl1()
             if split(code,"")[cp] == "[" then
                 lc = lc + 1
             elseif split(code,"")[cp] == "]" then
-                if lc = 0 then
+                if lc == 0 then
                     cp = cp + 1
                     d = true
                 else
@@ -95,7 +95,7 @@ local function bfl2()
             if split(code,"")[cp] == "]" then
                 lc = lc + 1
             elseif split(code,"")[cp] == "[" then
-                if lc = 0 then
+                if lc == 0 then
                     d = true
                 else
                     lc = lc -1
