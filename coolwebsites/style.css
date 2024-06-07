@@ -3,8 +3,11 @@ background {
     color: #ffffff;
     direction: column;
     align-items: fill;
-    font-size: 14pt !important;
 }
 a {
     color: #aa00aa;
+    font-size: 16px;
+}
+p {
+    font-size: 16px;
 }
