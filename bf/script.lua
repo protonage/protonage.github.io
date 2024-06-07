@@ -1,7 +1,6 @@
 print("Made with <3 by Protonage")
 
 -- TODO:
---  write searching algos for loops
 --  write interpreter
 --  test everything and pray you didnt write everything wrong
 
@@ -18,7 +17,11 @@ print("Made with <3 by Protonage")
 local input = ""
 local code = ""
 local bfarr = {}
-local ptr = 0
+for i = 1, 5000 do
+    bfarr[i] = 0
+  end  
+local ptr = 1
+local cp = 1
 local function split(inputstr, sep)
     if sep == nil then
       sep = "%s"
@@ -38,9 +41,15 @@ local function join(arr)
 end
 local function bfadd()
     bfarr[ptr] = bfarr[ptr] + 1
+    if bfarr[ptr] > 255 then 
+        bfarr[ptr] = 0
+    end
 end
 local function bfsub()
     bfarr[ptr] = bfarr[ptr] - 1
+    if bfarr[ptr] < 0 then
+        bfarr[ptr] = 255
+    end
 end
 local function bfr()
     ptr = ptr + 1
@@ -49,28 +58,72 @@ local function bfl()
     ptr = ptr - 1
 end
 local function bfo()
-    get("output").set_content(get("output").get_content() .. bfarr[ptr])
+    get("output").set_content(get("output").get_content() .. string.char(bfarr[ptr]))
 end
 local function bfi()
     local inp = split(input,"")
-    get("input").set_content(get("input").get_content() .. inp[1])
+    get("input").set_content(get("input").get_content() .. string.byte(inp[1]))
     inp = table.remove(inp,1)
     input = join("inp")
 end
 local function bfl1()
-    -- write searching algo for >
+    -- [
+    local lc = 0
+    if bfarr[ptr] == 0 then
+        d = false
+        while d == false
+            cp = cp + 1
+            if split(code,"")[cp] == "[" then
+                lc = lc + 1
+            elseif split(code,"")[cp] == "]" then
+                if lc = 0 then
+                    cp = cp + 1
+                    d = true
+                else
+                    lc = lc -1
+                end
+            end
+        end
+    end
 end
 local function bfl2()
-    -- write searching algo for <
+    local lc = 0
+    if bfarr[ptr] == 0 then
+        d = false
+        while d == false
+            cp = cp - 1
+            if split(code,"")[cp] == "]" then
+                lc = lc + 1
+            elseif split(code,"")[cp] == "[" then
+                if lc = 0 then
+                    d = true
+                else
+                    lc = lc -1
+                end
+            end
+        end
+    end
 end
 local function interpret()
-    -- write interpreter
+    while cp <= #code:gmatch"." do
+        if code:gmatch"."[cp] == "+" then
+            bfadd()
+        elseif code:gmatch"."[cp] == "-" then
+            bfsub()
+        elseif code:gmatch"."[cp] == ">" then bfr()
+        elseif code:gmatch"."[cp] == "<" then bfl()
+        elseif code:gmatch"."[cp] == "," then bfi()
+        elseif code:gmatch"."[cp] == "." then bfo()
+        elseif code:gmatch"."[cp] == "[" then bfl1()
+        elseif code:gmatch"."[cp] == "]" then bfl2()
+    end
 end
 local function cbclick()
-    print("cb has been clicked")
+    code = get("code").get_content()
+    interpret()
 end
 local function ibclick()
-    print("ib has been clicked")
+    input = get("input").get_content()
 end
 get("cb").on_click(cbclick)
 get("ib").on_click(ibclick)
