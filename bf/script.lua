@@ -116,6 +116,7 @@ local function interpret()
         elseif code:gmatch"."[cp] == "." then bfo()
         elseif code:gmatch"."[cp] == "[" then bfl1()
         elseif code:gmatch"."[cp] == "]" then bfl2()
+        end
     end
 end
 local function cbclick()
