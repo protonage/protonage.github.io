@@ -68,23 +68,23 @@ local function bfi()
 end
 local function bfl1()
     -- [
-    local lc = 0
-    if bfarr[ptr] == 0 then
-        d = false
-        while d == false do
-            cp = cp + 1
-            if split(code,"")[cp] == "[" then
-                lc = lc + 1
-            elseif split(code,"")[cp] == "]" then
-                if lc == 0 then
-                    cp = cp + 1
-                    d = true
-                else
-                    lc = lc -1
-                end
-            end
-        end
-    end
+    --local lc = 0
+    --if bfarr[ptr] == 0 then
+    --    d = false
+    --    while d == false do
+    --        cp = cp + 1
+    --        if split(code,"")[cp] == "[" then
+    --            lc = lc + 1
+    --        elseif split(code,"")[cp] == "]" then
+    --            if lc == 0 then
+    --                cp = cp + 1
+    --                d = true
+    --            else
+    --                lc = lc -1
+    --            end
+    --        end
+    --    end
+    --end
 end
 local function bfl2()
     local lc = 0
