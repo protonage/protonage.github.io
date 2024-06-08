@@ -112,7 +112,7 @@ local function interpret()
         --print(split(code,"")[cp])
         --print(cp)
         print(ptr)
-        print(bfarr)
+        --print(bfarr)
         print(bfarr[ptr])
         if split(code,"")[cp] == "+" then
             bfadd()
