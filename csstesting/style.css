@@ -1,10 +1,10 @@
 background {
     background-color: #545153;
-    align-items: center;
+    align-items: fill;
 }
 card {
     background-color: #fef2f2;
-    color: #000000;
+    color: #000000 !important;
     direction: column;
     align-items: fill;
     padding: 550px;
