@@ -1,0 +1,11 @@
+background {
+    background-color: #545153;
+    align-items: center;
+}
+card {
+    background-color: #fef2f2;
+    color: #000000;
+    direction: column;
+    align-items: fill;
+    padding: 550px;
+}
