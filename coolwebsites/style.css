@@ -5,9 +5,6 @@ background {
     color: #ffffff;
     direction: column;
     align-items: fill;
-    /* only for bussinga napture already does this by default (dont ask me why)*/
-    width: 100%;
-    height: 100%;
 }
 a {
     color: #aa00aa;
