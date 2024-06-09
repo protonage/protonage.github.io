@@ -70,7 +70,7 @@ local function render()
                 get(i).set_content(join(a))
             end
 local function gameloop()
-    print(Hello, World!)
+    render()
 end
 local function init()
     -- reset game board 
