@@ -68,6 +68,8 @@ local function render()
                 a[i] = "."
             end
             get(i).set_content(join(a))
+            print(game[k][i])
+            print(a)
         end
     end
 end
