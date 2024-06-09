@@ -1,0 +1,7 @@
+body {
+    font-family: monospace;
+    gap: 10;
+    background-color: #080808;
+    direction: column;
+    align-items: fill;
+}
