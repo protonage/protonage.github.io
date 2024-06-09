@@ -61,14 +61,14 @@ local function init()
         end
     end
     -- visually appealing animation
-    for i=40,1,-1 do
+    for i=20,1,-1 do
         print(i)
         for e=10,1,-1 do
             get(tostring(i)).set_content(get(tostring(i).get_content() .. "#"))
             wait(0.1)
         end
     end
-    for i=1,40 do
+    for i=1,20 do
         print(i)
         for k,v in pairs(split(get(tostring(i).get_content()))) do
             local a = split(get(tostring(i).get_content()))
