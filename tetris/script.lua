@@ -72,6 +72,7 @@ local function render()
     end
 end
 local function gameloop()
+    game[10][5] = 1
     render()
 end
 local function init()
