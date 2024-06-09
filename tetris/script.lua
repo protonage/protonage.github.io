@@ -74,13 +74,19 @@ local function init()
     --        sleep(0.1)
     --    end
     --end
-    for i=1,20 do
-        print(i)
-        for k,v in pairs(split(get(i).get_content())) do
-            local a = split(get(i).get_content())
-            a[i] = "."
-            get(i).set_content(join(a))
+    --for i=1,20 do
+    --    print(i)
+    --    for k,v in pairs(split(get(i).get_content())) do
+    --        local a = split(get(i).get_content())
+    --        a[i] = "."
+    --        get(i).set_content(join(a))
     --        sleep(0.1)
+    --    end
+    --end
+    for i=20,1,-1 do
+        print(i)
+        for e=10,1,-1 do
+            get(i).set_content(get(i).get_content() .. ".")
         end
     end
 end
