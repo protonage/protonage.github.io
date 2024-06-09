@@ -58,17 +58,19 @@ function sleep (a)
     while (os.clock() < sec) do 
     end 
 end
-local function render()
+local function render() do
     for k,v in pairs(game) do
         for i,e in pairs(split(get(k).get_content())) do
-                local a = split(get(k).get_content())
-                if game[k][i] == 1 then
-                    a[i] = "#"
-                else
-                    a[i] = "."
-                end
-                get(i).set_content(join(a))
+            local a = split(get(k).get_content())
+            if game[k][i] == 1 then
+                a[i] = "#"
+            else
+                a[i] = "."
             end
+            get(i).set_content(join(a))
+        end
+    end
+end
 local function gameloop()
     render()
 end
