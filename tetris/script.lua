@@ -67,20 +67,20 @@ local function init()
         end
     end
     -- visually appealing animation
-    for i=20,1,-1 do
-        print(i)
-        for e=10,1,-1 do
-            get(i).set_content(get(i).get_content() .. "#")
-            sleep(0.1)
-        end
-    end
+    --for i=20,1,-1 do
+    --    print(i)
+    --    for e=10,1,-1 do
+    --        get(i).set_content(get(i).get_content() .. "#")
+    --        sleep(0.1)
+    --    end
+    --end
     for i=1,20 do
         print(i)
-        for k,v in pairs(split(get(tostring(i).get_content()))) do
-            local a = split(get(tostring(i).get_content()))
+        for k,v in pairs(split(get(i).get_content()))) do
+            local a = split(get(i).get_content()))
             a[i] = "."
-            get(tostring(i)).set_content(join(a))
-            sleep(0.1)
+            get(i).set_content(join(a))
+    --        sleep(0.1)
         end
     end
 end
