@@ -85,4 +85,4 @@ local function init()
     end
 end
 
-get("sb").on_click(init())
+init()
