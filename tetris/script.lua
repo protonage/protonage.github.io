@@ -64,7 +64,7 @@ local function init()
     for i=20,1,-1 do
         print(i)
         for e=10,1,-1 do
-            get().set_content(get(i).get_content() .. "#"))
+            get(i).set_content(get(i).get_content() .. "#"))
             wait(0.1)
         end
     end
