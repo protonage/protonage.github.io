@@ -76,7 +76,7 @@ local function init()
     --end
     for i=1,20 do
         print(i)
-        for k,v in pairs(split(get(i).get_content()))) do
+        for k,v in pairs(split(get(i).get_content())) do
             local a = split(get(i).get_content()))
             a[i] = "."
             get(i).set_content(join(a))
