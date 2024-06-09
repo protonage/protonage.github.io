@@ -53,6 +53,12 @@ local function join(arr)
     end
     return o
 end
+function sleep (a) 
+    local sec = tonumber(os.clock() + a); 
+    while (os.clock() < sec) do 
+    end 
+end
+
 local function init()
     -- reset game board 
     for k,v in pairs(game) do
@@ -65,7 +71,7 @@ local function init()
         print(i)
         for e=10,1,-1 do
             get(i).set_content(get(i).get_content() .. "#")
-            wait(0.1)
+            sleep(0.1)
         end
     end
     for i=1,20 do
@@ -74,7 +80,7 @@ local function init()
             local a = split(get(tostring(i).get_content()))
             a[i] = "."
             get(tostring(i)).set_content(join(a))
-            wait(0.1)
+            sleep(0.1)
         end
     end
 end
