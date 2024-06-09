@@ -53,12 +53,12 @@ local function join(arr)
     end
     return o
 end
-function sleep (a) 
+function sleep (a)
     local sec = tonumber(os.clock() + a); 
     while (os.clock() < sec) do 
     end 
 end
-local function render() do
+local function render()
     for k,v in pairs(game) do
         for i,e in pairs(split(get(k).get_content())) do
             local a = split(get(k).get_content())
