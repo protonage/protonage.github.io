@@ -58,7 +58,20 @@ function sleep (a)
     while (os.clock() < sec) do 
     end 
 end
-
+local function render()
+    for k,v in pairs(game) do
+        for i,e in pairs(split(get(k).get_content())) do
+                local a = split(get(k).get_content())
+                if game[k][i] == 1 do 
+                    a[i] = "#"
+                else
+                    a[i] = "."
+                end
+                get(i).set_content(join(a))
+            end
+local function gameloop()
+    print(Hello, World!)
+end
 local function init()
     -- reset game board 
     for k,v in pairs(game) do
@@ -89,6 +102,7 @@ local function init()
             get(i).set_content(get(i).get_content() .. ".")
         end
     end
+    gameloop()
 end
 
 init()
