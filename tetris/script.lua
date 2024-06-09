@@ -59,6 +59,7 @@ function sleep (a)
     end 
 end
 local function render()
+    print("fuck me in the asshole")
     for k,v in pairs(game) do
         for i,e in pairs(split(get(k).get_content())) do
             local a = split(get(k).get_content())
