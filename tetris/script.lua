@@ -74,6 +74,7 @@ local function render()
     end
 end
 local function gameloop()
+    print("Hello World!")
     game[10][5] = 1
     render()
 end
