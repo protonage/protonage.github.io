@@ -67,7 +67,7 @@ local function init()
             wait(0.1)
         end
     end
-    for i=1,40,+1 do
+    for i=1,40 do
         for k,v in pairs(split(get(tostring(i).get_content()))) do
             local a = split(get(tostring(i).get_content()))
             a[i] = "."
