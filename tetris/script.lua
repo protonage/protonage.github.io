@@ -59,8 +59,8 @@ function sleep (a)
     end 
 end
 local function render()
-    print("fuck me in the asshole")
     for k,v in pairs(game) do
+        print("help1")
         for i,e in pairs(split(get(k).get_content())) do
             local a = split(get(k).get_content())
             if game[k][i] == 1 then
@@ -72,6 +72,7 @@ local function render()
             print(game[k][i])
             print(a)
         end
+        print("help2")
     end
 end
 local function gameloop()
